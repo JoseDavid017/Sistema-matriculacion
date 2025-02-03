@@ -14,7 +14,6 @@ function CourseCard() {
   const [matriculaConfirmada, setMatriculaConfirmada] = useState(false);
 
   useEffect(() => {
-    
     const storedCourses = JSON.parse(localStorage.getItem("selectedCourses"));
     const storedCredits = localStorage.getItem("totalCredits");
     const storedMatriculaStatus = localStorage.getItem("matriculaConfirmada");
@@ -93,10 +92,16 @@ function CourseCard() {
     setMatriculaConfirmada(true);
   }
 
+  function RegresarSeleccion() {
+    setMatriculaConfirmada(false);
+  }
+
   return (
     <div className="bg-gray-200 min-h-screen flex flex-col items-center justify-center dark:bg-gray-700 dark:text-gray-200 p-10 rounded-lg">
-      <h1 className="font-bold text-5xl mb-6">Cursos Disponibles</h1>
-        
+      <h1 className="font-bold text-3xl mb-6">Bienvenido, {estudiante.nombre}</h1>
+      <p className="text-xl mb-4">Semestre: {estudiante.semestre}</p>
+      <p className="text-lg mb-6">Créditos Disponibles: {maxCredits - totalCredits}</p>
+
       {!matriculaConfirmada ? (
         <>
           <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full max-w-6xl">
@@ -113,6 +118,7 @@ function CourseCard() {
                 <p className={`mt-2 text-sm font-semibold ${curso.limiteCupos - curso.matriculados > 0 ? 'text-green-600' : 'text-red-600'}`} >
                   Cupos disponibles: {curso.limiteCupos - curso.matriculados}
                 </p>
+                <p className="mt-2 text-sm font-semibold">Semestre: {curso.semestre}</p>
                 <button 
                   className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
                   onClick={() => handleSelect(curso)}
@@ -125,7 +131,7 @@ function CourseCard() {
           <h2 className="text-xl font-semibold mt-8">
             Créditos Seleccionados: {totalCredits} / {maxCredits}
           </h2>
-          
+
           <h2 className="font-bold text-3xl mt-10">Cursos Seleccionados:</h2>
           <table className="mt-4 w-full max-w-4xl border-collapse border border-gray-300">
             <thead>
@@ -179,19 +185,25 @@ function CourseCard() {
             </thead>
             <tbody>
               {selectedCourses.map((curso) => (
-                <tr key={curso.codigo} className="text-center hover:bg-gray-400 ">
+                <tr key={curso.codigo} className="text-center hover:bg-gray-400">
                   <td className="border border-gray-300 px-4 py-2">{curso.nombre}</td>
                   <td className="border border-gray-300 px-4 py-2">{curso.codigo}</td>
                   <td className="border border-gray-300 px-4 py-2">{curso.creditos}</td>
                 </tr>
               ))}
-              
+
               <tr className="font-semibold">
                 <td className="border border-gray-300 px-4 py-2" colSpan="2">Total de Créditos</td>
                 <td className="border border-gray-300 px-4 py-2">{totalCredits}</td>
               </tr>
             </tbody>
           </table>
+          <button
+            className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+            onClick={RegresarSeleccion}
+          >
+            Editar
+          </button>
         </div>
       )}
     </div>
