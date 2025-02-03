@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Sistema-matriculacion/static/css/main.e6c13ad2.css",
-    "main.js": "/Sistema-matriculacion/static/js/main.4eb2cb25.js",
+    "main.js": "/Sistema-matriculacion/static/js/main.d3e7ca13.js",
     "index.html": "/Sistema-matriculacion/index.html",
     "main.e6c13ad2.css.map": "/Sistema-matriculacion/static/css/main.e6c13ad2.css.map",
-    "main.4eb2cb25.js.map": "/Sistema-matriculacion/static/js/main.4eb2cb25.js.map"
+    "main.d3e7ca13.js.map": "/Sistema-matriculacion/static/js/main.d3e7ca13.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.4eb2cb25.js"
+    "static/js/main.d3e7ca13.js"
   ]
 }
