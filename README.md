@@ -1,7 +1,7 @@
 # Aplicación de Selección de Cursos
 
 ## Descripción
-Esta aplicación permite a los estudiantes seleccionar cursos de un catálogo disponible, gestionar su matrícula y confirmar la selección de cursos. La aplicación está diseñada para ser responsiva y ofrecer una experiencia de usuario intuitiva en dispositivos móviles y de escritorio.
+Esta aplicación permite a los estudiantes seleccionar cursos de un catálogo disponible, gestionar su matrícula y confirmar la selección de cursos. La aplicación está diseñada para ofrecer una experiencia de usuario intuitiva en dispositivos móviles y de escritorio.
 
 ---
 
@@ -27,11 +27,11 @@ Esta aplicación permite a los estudiantes seleccionar cursos de un catálogo di
 ## Instalación
 1. Clona este repositorio:
    ```bash
-   git clone <URL-del-repositorio>
+   git clone https://github.com/JoseDavid017/Sistema-matriculacion
    ```
 2. Accede al directorio del proyecto:
    ```bash
-   cd nombre-del-proyecto
+   cd sistema-matriculacion
    ```
 3. Instala las dependencias:
    ```bash
