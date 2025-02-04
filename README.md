@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+# Aplicación de Selección de Cursos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descripción
+Esta aplicación permite a los estudiantes seleccionar cursos de un catálogo disponible, gestionar su matrícula y confirmar la selección de cursos. La aplicación está diseñada para ser responsiva y ofrecer una experiencia de usuario intuitiva en dispositivos móviles y de escritorio.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Características
+- Visualización de cursos disponibles con información detallada (nombre, código, créditos, semestre y cupos disponibles).
+- Selección y eliminación de cursos.
+- Validaciones para:
+  - Límite de créditos permitidos.
+  - Disponibilidad de cupos.
+  - Correspondencia del curso con el semestre actual.
+- Confirmación de matrícula con persistencia de datos en `localStorage`.
+- Interfaz responsiva para adaptarse a dispositivos móviles, tabletas y escritorios.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tecnologías Utilizadas
+- **React**: Framework de JavaScript para la interfaz de usuario.
+- **Tailwind CSS**: Biblioteca de utilidades CSS para el diseño responsivo.
+- **LocalStorage**: Persistencia de datos en el navegador.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Instalación
+1. Clona este repositorio:
+   ```bash
+   git clone <URL-del-repositorio>
+   ```
+2. Accede al directorio del proyecto:
+   ```bash
+   cd nombre-del-proyecto
+   ```
+3. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+4. Ejecuta la aplicación:
+   ```bash
+   npm start
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+La aplicación estará disponible en [http://localhost:3000](http://localhost:3000).
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Estructura del Proyecto
+```
+src/
+├── componentes/
+│   └── CourseCard.jsx     # Componente principal para la gestión de cursos
+├── datos/
+│   ├── CursosDisponibles.js # Datos de los cursos disponibles
+│   └── Estudiantes.js       # Datos de los estudiantes
+└── App.js                  # Componente principal de la aplicación
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Uso
+1. La aplicación muestra una lista de cursos disponibles.
+2. Haz clic en el botón **Seleccionar** para agregar un curso.
+3. Los créditos seleccionados se actualizarán dinámicamente.
+4. Puedes eliminar cursos seleccionados desde la tabla de "Cursos Seleccionados".
+5. Haz clic en **Confirmar Matrícula** para guardar la selección.
 
-### `npm run eject`
+### Validaciones
+- Si intentas seleccionar un curso de otro semestre o sin cupos disponibles, la aplicación mostrará un mensaje de error.
+- No se permite superar el límite de créditos permitidos.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Mejoras Futuras
+- Autenticación de usuarios.
+- Integración con una base de datos.
+- Filtro y búsqueda de cursos.
+- Notificaciones personalizadas.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Contribuciones
+Las contribuciones son bienvenidas. Por favor, sigue los siguientes pasos:
+1. Haz un fork del proyecto.
+2. Crea una rama para tu función (`git checkout -b feature/nueva-funcionalidad`).
+3. Haz commit de tus cambios (`git commit -m 'Agrega nueva funcionalidad'`).
+4. Haz push a la rama (`git push origin feature/nueva-funcionalidad`).
+5. Abre un Pull Request.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Licencia
+Este proyecto está bajo la Licencia MIT. Puedes consultar el archivo `LICENSE` para más información.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## Autor
+Desarrollado por Jose Ariza.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
