@@ -50,6 +50,7 @@ La aplicación estará disponible en [http://localhost:3000](http://localhost:30
 ```
 src/
 ├── componentes/
+│   └── login.jsx     # Componente para el inicio de sesion de la matricula
 │   └── CourseCard.jsx     # Componente principal para la gestión de cursos
 ├── datos/
 │   ├── CursosDisponibles.js # Datos de los cursos disponibles
@@ -91,7 +92,7 @@ Las contribuciones son bienvenidas. Por favor, sigue los siguientes pasos:
 ---
 
 ## Licencia
-Este proyecto está bajo la Licencia MIT. Puedes consultar el archivo `LICENSE` para más información.
+Este proyecto está bajo la Licencia MIT.
 
 ---
 
